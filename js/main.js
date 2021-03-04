@@ -40,7 +40,7 @@ const lightbox = document.querySelector(".lightbox"),
 let itemIndex=0;
 
 for(let i=0; i<totalPortfolioItem;i++){
-    portfolioItem[i].addEventListener("click",function(){
+    portfolioItem[i].querySelector(".icon").addEventListener("click",function(){
         itemIndex=i;
         changeItem();
         toggleLightbox();

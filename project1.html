@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/styles1.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/reset.css'>
+    <title>project1</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container_nav">
+            <div class="container_nav-link">
+                <div class="title">
+                    Wed tĩnh giới thiệu xe vinfast
+                </div>
+                <div><a href="./index.html" style="color: #ec1839;">Home</a></div>
+            </div>
+        </div>
+        <div class="container_body">
+            <div class="container_project">
+                <div class="description">
+                    <div class="description-title pd-15">
+                        <h2>Mô tả:</h2>
+                    </div>
+                    <div class="description-content">
+                        <div class="row">
+                            <div class="experience pd-15">
+                            Đây là một wed tĩnh tôi hoàn thành trong vòng 3 ngày. Tôi đã sử dụng HTML, CSS, JAVASCRIPT để hoàn thành.
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="description-title pd-15">
+                        <h2>Kỹ năng thu được:</h2>
+                    </div>
+                    <div class="description-content">
+                        <div class="row">
+                            <div class="experience pd-15">
+                                Tôi đã học được và ứng dụng được HTML, CSS, JAVASCRIPT. Bản thân đã học tập thêm kỹ năng tự học, tìm kiếm thông tin và quản lý mã nguồn bằng github. 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description-title pd-15">
+                        <h2>Link sản phẩm:</h2>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="slide">
+                <div class="mySlides">
+                    <img src="./images/image.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                    <img src="./images/image (1).png" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                    <img src="./images/image (2).png" style="width:100%">
+                </div>
+                
+                <div class="mySlides">
+                    <img src="./images/image (3).png" style="width:100%">
+                </div>
+                
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="./images/image.png" style="width:100%" onclick="currentSlide(1)">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="./images/image (1).png" style="width:100%" onclick="currentSlide(2)">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="./images/image (2).png" style="width:100%" onclick="currentSlide(3)">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="./images/image (3).png" style="width:100%" onclick="currentSlide(4)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+</body>
+</html>

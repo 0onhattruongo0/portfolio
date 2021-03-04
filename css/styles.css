@@ -206,6 +206,13 @@
     font-weight: 600;
     margin: 20px 0 10px;
 }
+.home .intro h3{
+    font-size: 20px;
+    color: #302e4d;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin: 20px 0 10px;
+}
 .home .intro .social-links{
     margin-top: 25px;
 }
@@ -341,10 +348,15 @@
 }
 
 .education{
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 100%;
+    max-width: 100%;
 }
 .experience{
+    margin-top: 20px;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.reference{
     flex: 0 0 50%;
     max-width: 50%;
 }
@@ -412,7 +424,8 @@
     text-transform: capitalize;
     color: #302e4d;
 }
-.about-content .timeline .timeline-text{
+.about-content .timeline .timeline-text
+,.about-content .des{
     font-size: 16px;
     line-height: 25px;
     color: #540e70;
@@ -523,6 +536,27 @@
     color: #ec1839;
 }
 
+.portfolio .portfolio-item .portfolio-info .link{
+    height: 30px;
+    width: 30px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    transition: all 0.3s ease;
+    transform: translateX(20px);
+    opacity: 0;
+}
+.portfolio-item_inner:hover .portfolio-info .link{
+    transform: translateX(0);
+    opacity: 1;
+}
+.portfolio .portfolio-item .portfolio-info .link .fa{
+    line-height: 30px;
+    color: #ec1839;
+}
 
 
 .lightbox{
@@ -651,7 +685,7 @@
 
 @media(max-width:909px){
     .personal-info .info-item,
-    .education,.experience{
+    .reference{
     flex: 0 0 100%;
     max-width: 100%;
 }

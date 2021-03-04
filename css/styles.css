@@ -240,7 +240,7 @@
     /* padding-bottom: 70px; */
 }
 
-.row{
+.row, .educate_time{
     display: flex;
     flex-wrap: wrap;
     /* margin-left: -15px; */
@@ -356,7 +356,7 @@
     flex: 0 0 100%;
     max-width: 100%;
 }
-.reference{
+.reference,.educate{
     flex: 0 0 50%;
     max-width: 50%;
 }
@@ -685,7 +685,7 @@
 
 @media(max-width:909px){
     .personal-info .info-item,
-    .reference{
+    .reference,.educate{
     flex: 0 0 100%;
     max-width: 100%;
 }
